@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:gt="http://gt">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,6 +7,7 @@
 <body>
 <div th:fragment="body">
     Hi, I'm body
+    <p gt:echo="echo source">This is echo source</p>
 </div>
 </body>
 </html>
