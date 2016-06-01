@@ -1,5 +1,6 @@
 package io.hbprotoss.thymeleaf.dialect;
 
+import io.hbprotoss.thymeleaf.dialect.processor.EchoAttributeTagProcessor;
 import org.thymeleaf.dialect.AbstractProcessorDialect;
 import org.thymeleaf.processor.IProcessor;
 

@@ -1,4 +1,4 @@
-package io.hbprotoss.thymeleaf.dialect;
+package io.hbprotoss.thymeleaf.dialect.processor;
 
 import org.thymeleaf.context.ITemplateContext;
 import org.thymeleaf.engine.AttributeName;
