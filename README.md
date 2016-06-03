@@ -10,7 +10,7 @@ index.html中引用"直接引用静态页面"注释部分, 直接使用thymeleaf
 
 ### 方法二、自定义标签引用
 
-index.html中"引用自定义element tag"部分, 使用thymeleaf的dialect自定义标签。页面模板(webapp/WEB-INF/tempates/)必须在WEB-INF目录下,否则运行时读取不到。逻辑位于`io.hbprotoss.thymeleaf.dialect`下,定义了`gt`大标签,相当于`th`这个默认标签。定义了header, footer, nav元素。
+index.html中"引用自定义element tag"部分, 使用thymeleaf的dialect自定义标签。页面模板(webapp/WEB-INF/tempates/)必须在WEB-INF目录下,否则运行时读取不到。逻辑位于`io.hbprotoss.thymeleaf.dialect`下,定义了`gt`大标签,相当于`th`这个默认标签。定义了header, footer, nav元素。使用者可以不关心模板内动态数据是怎么获取的
 
 可以参考demo中的HeaderElementTagProcessor,有动态数据获取部分。
 
