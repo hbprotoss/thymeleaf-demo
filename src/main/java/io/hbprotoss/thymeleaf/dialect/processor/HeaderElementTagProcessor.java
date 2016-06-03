@@ -37,8 +37,11 @@ public class HeaderElementTagProcessor extends AbstractElementTagProcessor {
 
     @Override
     protected void doProcess(ITemplateContext context, IProcessableElementTag tag, IElementTagStructureHandler structureHandler) {
+        // 需要从WebApplicationContext中获取模板内容
         final WebApplicationContext webCtx = (WebApplicationContext) SpringContextUtils.getApplicationContext(context);
+        // 向渲染引擎传递变量
         final IEngineContext engineCtx = (IEngineContext) context;
+        // 自定义service
         final UserService userService = (UserService) webCtx.getBean("userService");
 
         String template;
@@ -47,6 +50,7 @@ public class HeaderElementTagProcessor extends AbstractElementTagProcessor {
         } catch (IOException e) {
             throw new RuntimeException("Can not read template");
         }
+        // 向引擎上下文中添加username变量
         engineCtx.setVariable("username", userService.getUsername());
 
         final TemplateManager templateManager = context.getConfiguration().getTemplateManager();
@@ -58,6 +62,7 @@ public class HeaderElementTagProcessor extends AbstractElementTagProcessor {
                         true);
         final StringWriter writer = new StringWriter();
         templateManager.process(templateModel, context, writer);
+        // 可以考虑保留引用标签上的属性
         structureHandler.replaceWith(writer.toString(), false);
     }
 }
