@@ -7,12 +7,17 @@
 </head>
 <body>
 
+<!--直接引用静态页面-->
 <!--<nav th:include="common/header::header" class="navbar" role="navigation" style="background: skyblue"></nav>-->
+<!--<nav th:include="common/nav::nav" class="menu" data-toggle="menu" style="width: 200px; float: left;"></nav>-->
+<!--<div th:include="body::body" style="float: left;"></div>-->
+<!--<div th:include="common/footer::footer"></div>-->
+
+<!--引用自定义element tag-->
 <gt:header></gt:header>
-<nav th:include="common/nav::nav" class="menu" data-toggle="menu" style="width: 200px; float: left;"></nav>
+<gt:nav></gt:nav>
 <div th:include="body::body" style="float: left;"></div>
-<hr style="clear:left;margin-top: 5px;"/>
-<div th:include="common/footer::footer"></div>
+<gt:footer></gt:footer>
 
 <script src="http://static.dev.gttown.com/static/lib/jquery/core/1.9.1/jquery.min.js"></script>
 <script src="http://static.dev.gttown.com/static/lib/zui/1.4.0/js/zui.min.js"></script>
