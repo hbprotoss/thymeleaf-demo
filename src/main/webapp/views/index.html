@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:gt="http://gt">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,8 @@
 </head>
 <body>
 
-<nav th:include="common/header::header" class="navbar" role="navigation" style="background: skyblue"></nav>
+<!--<nav th:include="common/header::header" class="navbar" role="navigation" style="background: skyblue"></nav>-->
+<gt:header></gt:header>
 <nav th:include="common/nav::nav" class="menu" data-toggle="menu" style="width: 200px; float: left;"></nav>
 <div th:include="body::body" style="float: left;"></div>
 <hr style="clear:left;margin-top: 5px;"/>

@@ -1,6 +1,7 @@
 package io.hbprotoss.thymeleaf.dialect;
 
 import io.hbprotoss.thymeleaf.dialect.processor.EchoAttributeTagProcessor;
+import io.hbprotoss.thymeleaf.dialect.processor.HeaderElementTagProcessor;
 import org.thymeleaf.dialect.AbstractProcessorDialect;
 import org.thymeleaf.processor.IProcessor;
 
@@ -19,6 +20,7 @@ public class GtDialect extends AbstractProcessorDialect {
     public Set<IProcessor> getProcessors(String dialectPrefix) {
         final Set<IProcessor> processors = new HashSet<>();
         processors.add(new EchoAttributeTagProcessor(dialectPrefix));
+        processors.add(new HeaderElementTagProcessor(dialectPrefix));
         return processors;
     }
 }
